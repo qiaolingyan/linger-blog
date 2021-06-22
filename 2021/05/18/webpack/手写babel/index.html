@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="qiao">
+    
+    <title>
+        
+            手写babel |
+        
+        Qiao
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/img.jpg">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/img.jpg","favicon":"/images/img.jpg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"3.4.3"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                Qiao
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                TAGS
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/links"
+                            >
+                                LINKS
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                ABOUT
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">TAGS</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/links">LINKS</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">ABOUT</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">手写babel</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/img.jpg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">qiao</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2021-05-18 09:00:04
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/babel/">babel</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/babel/">babel</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h2 id="整体思路"><a href="#整体思路" class="headerlink" title="整体思路"></a>整体思路</h2><h3 id="babel-的编译流程"><a href="#babel-的编译流程" class="headerlink" title="babel 的编译流程"></a>babel 的编译流程</h3><p>我们知道，babel 的主要编译流程是 parse、transform、generate。</p>
+<ul>
+<li>parse 是把源码转成 AST</li>
+<li>transform 是对 AST 做增删改</li>
+<li>generate 是打印 AST 成目标代码并生成 sourcemap</li>
+</ul>
+<h3 id="babel7-内置的包"><a href="#babel7-内置的包" class="headerlink" title="babel7 内置的包"></a>babel7 内置的包</h3><p>babel 7 把这些功能的实现放到了不同的包里面：</p>
+<ul>
+<li><code>@babel/parser</code> 解析源码成 AST，对应 parse 阶段</li>
+<li><code>@babel/traverse</code> 遍历 AST 并调用 visitor 函数，对应 transform 阶段</li>
+<li><code>@babel/generate</code> 打印 AST，生成目标代码和 sorucemap，对应 generate 阶段</li>
+</ul>
+<p>其中，遍历过程中需要创建 AST，会用到：</p>
+<ul>
+<li><code>@babel/types</code> 创建、判断 AST</li>
+<li><code>@babel/template</code> 根据模块批量创建 AST</li>
+</ul>
+<p>上面是每一个阶段的功能， babel 整体功能的入口是在：</p>
+<ul>
+<li><code>@babel/core</code> 解析配置、应用 plugin、preset，完成整体编译流程</li>
+</ul>
+<p>插件和插件之间有一些公共函数，这些都是在：</p>
+<ul>
+<li><code>@babel/helpers</code> 用于转换 es next 代码需要的通过模板创建的 AST，比如 _typeof、_defineProperties 等</li>
+<li><code>@babel/helper-xxx</code> 其他的插件之间共享的用于操作 AST 的公共函数</li>
+</ul>
+<p>当然，除了编译期转换的时候会有公共函数以外，运行时也有，这部分是放在：</p>
+<ul>
+<li><p><code>@babel/runtime</code> 主要是包含 corejs、helpers、regenerator 这 3 部分：</p>
+</li>
+<li><ul>
+<li>helper：helper 函数的运行时版本（不是通过 AST 注入了，而是运行时引入代码）</li>
+<li>corejs：es next 的 api 的实现，corejs 2 只支持静态方法，corejs 3 还支持实例方法</li>
+<li>regenerator：async await 的实现，由 facebook 维护</li>
+</ul>
+</li>
+</ul>
+<p>（babel 做语法转换是自己实现的 helper，但是做 polyfill 都不是自己实现的，而是借助了第三方的 corejs、regenerator）</p>
+<h3 id="我们要实现哪些包"><a href="#我们要实现哪些包" class="headerlink" title="我们要实现哪些包"></a>我们要实现哪些包</h3><p>上面介绍的是 babel 完成功能所内置的一些包，我们如果要写一个简易的 babel，也得实现这些包，但可以做一些简化。</p>
+<ul>
+<li><code>parser 包</code>是肯定要实现的，babel parser 是基于 acorn fork 的，我们也基于 acorn，做一点扩展。完成从源码到 AST 的转换。</li>
+<li><code>traverse 包</code>是对 AST 的遍历，需要知道不同类型的 AST 都遍历哪些 key，这些是在 @babel/types 包里面定义的，我们也用类似的实现方式，并且会调用对应的 visitor，实现 path 和 path.scope 的一些 api 然后传入。</li>
+<li><code>generate 包</code>是打印 AST 成目标代码，生成 sourcemap。打印这部分每个 AST 类型都要写一个对应的函数来处理，生成 sourcemap 使用 source-map 这个包，关联 parse 时记录的 loc 和打印时计算的位置来生成每一个 mapping。</li>
+<li><code>types 包</code>用于创建 AST，会维护创建和判断各种 AST 的 api，并且提供每种 AST 需要遍历的属性是哪些，用于 traverse 的过程</li>
+<li><code>template 包</code>是批量创建 AST 的，这里我们实现一个简单的版本，传入字符串，parse 成 AST 返回。</li>
+<li><code>core 包</code>是整体流程的串联，支持 plugins 和 presets，调用插件，合并成最终的 visitors，然后再 traverse。</li>
+<li><code>helper 包</code>我们也会实现一个，因为支持了 plugin，那么中有一些公共的函数可以复用</li>
+<li><code>runtime 包</code>我们也提供一下，不过只加入一些用于做语法转换的辅助函数就好了</li>
+</ul>
+<p>这是我们大概会做的事情，把这些都实现一遍就算一个比较完整的 babel 了。实现的过程中更能加深我们对 babel、对转译器的认识，不只是掌握 babel 本身。</p>
+<p>下面我们来详细分析一下每一步的具体思路：</p>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><p>(因为代码在那台坏掉的电脑拿不出来，加上这也不是小册里，所以只会提供思路，等小册上线会提供完整源码的)</p>
+<p>为了简化，我们不做分包了，把代码都放在一个包里实现。</p>
+<h3 id="parser"><a href="#parser" class="headerlink" title="parser"></a>parser</h3><p>主流的 parser 有 esprima、acorn 等，acorn 是最流行的，babel parser 是 fork 自 acorn，做了很多修改。我们不需要 fork，基于 acorn 的插件机制做一些扩展即可。</p>
+<p>比如 acorn 所 parse 出的 AST 只有 Literal （字面量）类型，不区分具体是字符串、数字或者布尔等字面量，而 babel parser 把它们细化成了 StringLiteral、NumericLiteral、BooleanLiteral 等 AST。</p>
+<p>我们就实现一下对 AST 做了这种扩展的 parser。</p>
+<p>我们先用一下原本的 acorn parser：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">const acorn = require(&quot;acorn&quot;);</span><br><span class="line"></span><br><span class="line">const Parser = acorn.Parser;</span><br><span class="line"></span><br><span class="line">const ast = Parser.parse(`</span><br><span class="line">    const a = 1;</span><br><span class="line">`);</span><br><span class="line">console.log(JSON.stringify(ast, null, 2));</span><br></pre></td></tr></table></figure>
+
+<p>打印如下：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="
+                      alt="图片"
+                ></p>
+<p>可以看到数字字面量 parse 的结果是 Literal，这样判断类型还需要去看下值的类型，才能确定是什么字面量，比较麻烦。这也是为什么 babel 把它们做了细化。</p>
+<p>我们也细化一下：</p>
+<p>acorn 扩展的方式是继承 + 重写，继承之前的 parser，重写一些方法，返回新 parser。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">const acorn = require(&quot;acorn&quot;);</span><br><span class="line"></span><br><span class="line">const Parser = acorn.Parser;</span><br><span class="line"></span><br><span class="line">var literalExtend = function(Parser) &#123;</span><br><span class="line">  return class extends Parser &#123;</span><br><span class="line">    parseLiteral (...args) &#123;</span><br><span class="line">        const node = super.parseLiteral(...args);</span><br><span class="line">        switch(typeof node.value) &#123;</span><br><span class="line">            case &#x27;number&#x27;:</span><br><span class="line">                node.type = &#x27;NumericLiteral&#x27;;</span><br><span class="line">                break;</span><br><span class="line">            case &#x27;string&#x27;:</span><br><span class="line">                node.type = &#x27;StringLiteral&#x27;;</span><br><span class="line">                break;</span><br><span class="line">        &#125;</span><br><span class="line">        return  node;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">const newParser = Parser.extend(literalExtend);</span><br><span class="line"></span><br><span class="line">const ast = newParser.parse(`</span><br><span class="line">    const a = 1;</span><br><span class="line">`);</span><br><span class="line">console.log(JSON.stringify(ast, null, 2));</span><br></pre></td></tr></table></figure>
+
+<p>我们在 parse 的时候就判断了字面量的类型，然后设置了 type。</p>
+<p>试下效果：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="
+                      alt="图片"
+                ></p>
+<p>这样，我们就实现了类似 babel parser 对 acorn 的扩展。</p>
+<p>当然，babel parser 的扩展有很多，这里我们只是简单实现，理清思路即可。</p>
+<h3 id="traverse"><a href="#traverse" class="headerlink" title="traverse"></a>traverse</h3><p>遍历 AST 是一个深度优先搜索的过程，当处理到具体的 AST 节点我们要知道怎么继续遍历子 AST 节点。</p>
+<p>在 babel types 包中定义了不同 AST 怎么遍历（visitor）、怎么创建（builder）、怎么判断（fidelds.validate）以及别名（alias）。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="
+                      alt="图片"
+                >image.png</p>
+<p>这里我们也需要维护每种 AST 怎么遍历的数据：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">const AST_DEFINATIONS_MAP = new Map();</span><br><span class="line"></span><br><span class="line">AST_DEFINATIONS_MAP.set(&#x27;Program&#x27;, &#123;</span><br><span class="line">    visitor: [&#x27;body&#x27;]</span><br><span class="line">&#125;);</span><br><span class="line">AST_DEFINATIONS_MAP.set(&#x27;VariableDeclaration&#x27;, &#123;</span><br><span class="line">    visitor: [&#x27;declarations&#x27;]</span><br><span class="line">&#125;);</span><br><span class="line">AST_DEFINATIONS_MAP.set(&#x27;VariableDeclarator&#x27;, &#123;</span><br><span class="line">    visitor: [&#x27;id&#x27;, &#x27;init&#x27;]</span><br><span class="line">&#125;);</span><br><span class="line">AST_DEFINATIONS_MAP.set(&#x27;Identifier&#x27;, &#123;&#125;);</span><br><span class="line">AST_DEFINATIONS_MAP.set(&#x27;NumericLiteral&#x27;, &#123;&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>然后基于这些数据对 AST 进行深度优先遍历：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">function traverse(node) &#123;</span><br><span class="line">    const defination = astDefinationsMap.get(node.type);</span><br><span class="line"></span><br><span class="line">    console.log(node.type);</span><br><span class="line"></span><br><span class="line">    if (defination.visitor) &#123;</span><br><span class="line">        defination.visitor.forEach(key =&gt; &#123;</span><br><span class="line">            const prop = node[key];</span><br><span class="line">            if (Array.isArray(prop)) &#123; // 如果该属性是数组</span><br><span class="line">                prop.forEach(childNode =&gt; &#123;</span><br><span class="line">                    traverse(childNode);</span><br><span class="line">                &#125;)</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                traverse(prop);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>打印结果如下：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="
+                      alt="图片"
+                ></p>
+<p>对照下刚才的 AST 结构，确实实现了深度优先遍历。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="
+                      alt="图片"
+                ></p>
+<h4 id="visitor"><a href="#visitor" class="headerlink" title="visitor"></a>visitor</h4><p>遍历之后，我们要实现 visitors 的功能，在遍历的过程中对 AST 做增删改。这个就是遍历的过程中根据 node.type 来调用对应的 visitor 函数：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">function traverse(node, visitors) &#123;</span><br><span class="line">    const defination = astDefinationsMap.get(node.type);</span><br><span class="line"></span><br><span class="line">    const visitorFunc = visitors[node.type];</span><br><span class="line"></span><br><span class="line">    if(visitorFunc &amp;&amp; typeof visitorFunc === &#x27;function&#x27;) &#123;</span><br><span class="line">        visitorFunc(node);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    if (defination.visitor) &#123;</span><br><span class="line">        defination.visitor.forEach(key =&gt; &#123;</span><br><span class="line">            const prop = node[key];</span><br><span class="line">            if (Array.isArray(prop)) &#123; // 如果该属性是数组</span><br><span class="line">                prop.forEach(childNode =&gt; &#123;</span><br><span class="line">                    traverse(childNode, visitors);</span><br><span class="line">                &#125;)</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                traverse(prop, visitors);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>我们来试验一下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">traverse(ast, &#123;</span><br><span class="line">    Identifier(node) &#123;</span><br><span class="line">        node.name = &#x27;b&#x27;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>之后再次查看 AST，发现 Identifier 的 name 已经从 a 变成了 b</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="
+                      alt="图片"
+                ></p>
+<p>babel 的 visitor 也支持指定 enter、exit 来选择在遍历子节点之前和之后调用，如果传入的是函数，那么就被当做 enter：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">function traverse(node, visitors) &#123;</span><br><span class="line">    const defination = astDefinationsMap.get(node.type);</span><br><span class="line"></span><br><span class="line">    let visitorFuncs = visitors[node.type] || &#123;&#125;;</span><br><span class="line"></span><br><span class="line">    if(typeof visitorFuncs === &#x27;function&#x27;) &#123;</span><br><span class="line">        visitorFuncs = &#123;</span><br><span class="line">            enter: visitorFuncs</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    visitorFuncs.enter &amp;&amp; visitorFuncs.enter(node);</span><br><span class="line"></span><br><span class="line">    if (defination.visitor) &#123;</span><br><span class="line">        defination.visitor.forEach(key =&gt; &#123;</span><br><span class="line">            const prop = node[key];</span><br><span class="line">            if (Array.isArray(prop)) &#123; // 如果该属性是数组</span><br><span class="line">                prop.forEach(childNode =&gt; &#123;</span><br><span class="line">                    traverse(childNode, visitors);</span><br><span class="line">                &#125;)</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                traverse(prop, visitors);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    visitorFuncs.exit &amp;&amp; visitorFuncs.exit(node);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样，我们传入的 visitor 也可以这样写：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">traverse(ast, &#123;</span><br><span class="line">    Identifier: &#123;</span><br><span class="line">        exit(node) &#123;</span><br><span class="line">            node.name = &#x27;b&#x27;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>会在遍历完子节点之后被调用。</p>
+<h4 id="path"><a href="#path" class="headerlink" title="path"></a>path</h4><p>我们实现的 visitor 是直接传入的 node，但是 AST 中并没有父节点的信息，所以我们要把父节点也传进去。</p>
+<p>babel 提供了 path 的功能，它是从当前节点到根节点的一条路径，通过 parent 串联。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="
+                      alt="图片"
+                ></p>
+<p>我们封装一个 NodePath 的类：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class NodePath &#123;</span><br><span class="line">    constructor(node, parent, parentPath) &#123;</span><br><span class="line">        this.node = node;</span><br><span class="line">        this.parent = parent;</span><br><span class="line">        this.parentPath = parentPath;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>调用 visitor 的时候创建 path 对象传入：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">function traverse(node, visitors, parent, parentPath) &#123;</span><br><span class="line">    const defination = astDefinationsMap.get(node.type);</span><br><span class="line"></span><br><span class="line">    let visitorFuncs = visitors[node.type] || &#123;&#125;;</span><br><span class="line"></span><br><span class="line">    if(typeof visitorFuncs === &#x27;function&#x27;) &#123;</span><br><span class="line">        visitorFuncs = &#123;</span><br><span class="line">            enter: visitorFuncs</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    const path = new NodePath(node, parent, parentPath);</span><br><span class="line"></span><br><span class="line">    visitorFuncs.enter &amp;&amp; visitorFuncs.enter(path);</span><br><span class="line"></span><br><span class="line">    if (defination.visitor) &#123;</span><br><span class="line">        defination.visitor.forEach(key =&gt; &#123;</span><br><span class="line">            const prop = node[key];</span><br><span class="line">            if (Array.isArray(prop)) &#123; // 如果该属性是数组</span><br><span class="line">                prop.forEach(childNode =&gt; &#123;</span><br><span class="line">                    traverse(childNode, visitors, node, path);</span><br><span class="line">                &#125;)</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                traverse(prop, visitors, node, path);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    visitorFuncs.exit &amp;&amp; visitorFuncs.exit(path);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样，我们可以在 visitor 中拿到父节点，父节点的父节点，我们来试一下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">traverse(ast, &#123;</span><br><span class="line">    Identifier: &#123;</span><br><span class="line">        exit(path) &#123;</span><br><span class="line">            path.node.name = &#x27;b&#x27;;</span><br><span class="line">            let curPath = path;</span><br><span class="line">            while (curPath) &#123;</span><br><span class="line">                console.log(curPath.node.type);</span><br><span class="line">                curPath = curPath.parentPath;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>打印结果如下：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="
+                      alt="图片"
+                ></p>
+<p>从当前节点到根节点的 AST 都可以获取到。</p>
+<h4 id="path-的-api"><a href="#path-的-api" class="headerlink" title="path 的 api"></a>path 的 api</h4><p>parent 可以保存，同理 sibling 也可以，也就是说我们可以通过 path 拿到所有的 AST。但是直接操作 AST 有点麻烦，所以我们要提供一些 api 来简化操作。</p>
+<p>首先我们要把遍历到的 AST 的属性对应的 key 和如果是数组时对应的 listKey 都保存下来。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">class NodePath &#123;</span><br><span class="line">    constructor(node, parent, parentPath, key, listKey) &#123;</span><br><span class="line">        this.node = node;</span><br><span class="line">        this.parent = parent;</span><br><span class="line">        this.parentPath = parentPath;</span><br><span class="line">        this.key = key;</span><br><span class="line">        this.listKey = listKey;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function traverse(node, visitors, parent, parentPath, key, listKey) &#123;</span><br><span class="line">    const defination = astDefinationsMap.get(node.type);</span><br><span class="line"></span><br><span class="line">    let visitorFuncs = visitors[node.type] || &#123;&#125;;</span><br><span class="line"></span><br><span class="line">    if(typeof visitorFuncs === &#x27;function&#x27;) &#123;</span><br><span class="line">        visitorFuncs = &#123;</span><br><span class="line">            enter: visitorFuncs</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    const path = new NodePath(node, parent, parentPath, key, listKey);</span><br><span class="line"></span><br><span class="line">    visitorFuncs.enter &amp;&amp; visitorFuncs.enter(path);</span><br><span class="line"></span><br><span class="line">    if (defination.visitor) &#123;</span><br><span class="line">        defination.visitor.forEach(key =&gt; &#123;</span><br><span class="line">            const prop = node[key];</span><br><span class="line">            if (Array.isArray(prop)) &#123; // 如果该属性是数组</span><br><span class="line">                prop.forEach((childNode, index) =&gt; &#123;</span><br><span class="line">                    traverse(childNode, visitors, node, path, key, index);</span><br><span class="line">                &#125;)</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                traverse(prop, visitors, node, path, key);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    visitorFuncs.exit &amp;&amp; visitorFuncs.exit(path);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后基于 key 和 listKey 来实现 replaceWith 和 remove 的 api：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">class NodePath &#123;</span><br><span class="line">    constructor(node, parent, parentPath, key, listKey) &#123;</span><br><span class="line">        this.node = node;</span><br><span class="line">        this.parent = parent;</span><br><span class="line">        this.parentPath = parentPath;</span><br><span class="line">        this.key = key;</span><br><span class="line">        this.listKey = listKey;</span><br><span class="line">    &#125;</span><br><span class="line">    replaceWith(node) &#123;</span><br><span class="line">        if (this.listKey) &#123;</span><br><span class="line">            this.parent[this.key].splice(this.listKey, 1, node);</span><br><span class="line">        &#125;</span><br><span class="line">        this.parent[this.key] = node</span><br><span class="line">    &#125;</span><br><span class="line">    remove () &#123;</span><br><span class="line">        if (this.listKey) &#123;</span><br><span class="line">            this.parent[this.key].splice(this.listKey, 1);</span><br><span class="line">        &#125;</span><br><span class="line">        this.parent[this.key] = null;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>试验下效果：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">traverse(ast, &#123;</span><br><span class="line">    NumericLiteral(path) &#123;</span><br><span class="line">        path.replaceWith(&#123; type: &#x27;Identifier&#x27;, name: &#x27;bbbbbbb&#x27; &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>结果为：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="
+                      alt="图片"
+                ></p>
+<p>NumericLiteral 被替换为了 Identifier。我们成功的实现了 path.replaceWith。</p>
+<h5 id="path-scope"><a href="#path-scope" class="headerlink" title="path.scope"></a>path.scope</h5><p>path.scope 是作用域的信息，记录声明的变量的 binding、它们的引用 reference、在哪里被修改 （constantViolations），以及父作用域等。是静态作用域链的实现。</p>
+<p>实现思路：</p>
+<p>首先函数、块、模块都会生成作用域，当处理到这些 AST 时要创建一个 Scope 对象，它有 bindings 属性，每一个声明都会创建一个 binding（比如变量声明语句 VariableDeclaration、函数声明语句 FuncitonDeclaration 以及参数、import 等）</p>
+<p>通过 Identifier 引用这些作用域中的 binding 的时候就会记录 references，如果被修改，则记录修改的语句的 AST 对应的 path，比如赋值语句。</p>
+<p>同样需要提供一系列 api 来简化作用域的分析和操作，比如查找 getBinding、删除 removeBinding、重命名 rename 等。</p>
+<p>篇幅关系，这里就不做实现了，《babel 插件通关秘籍》小册中会有完整的实现。</p>
+<h3 id="types"><a href="#types" class="headerlink" title="types"></a>types</h3><p>在 traverse 的时候我们实现了 path.replaceWith 的 api，用于替换 AST 成新的 AST，我们是直接传入了字面量对象，这种方式比较麻烦。babel 是通过 types 包来提供创建 AST 的能力，我们来分析一下实现思路：</p>
+<p>其实创建 AST 节点也是一个递归的过程，需要保证每一部分都是正确的，我们在遍历的时候保存了 visitor 的 key，在创建的时候仍然是创建这些 key 对应的 AST，不过需要对传入的参数做一下检验。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">defineType(&quot;BinaryExpression&quot;, &#123;</span><br><span class="line">    builder: [&quot;operator&quot;, &quot;left&quot;, &quot;right&quot;],</span><br><span class="line">    fields: &#123;</span><br><span class="line">      operator: &#123;</span><br><span class="line">        validate: assertOneOf(...BINARY_OPERATORS),</span><br><span class="line">      &#125;,</span><br><span class="line">      left: &#123;</span><br><span class="line">        validate: assertNodeType(&quot;Expression&quot;),</span><br><span class="line">      &#125;,</span><br><span class="line">      right: &#123;</span><br><span class="line">        validate: assertNodeType(&quot;Expression&quot;),</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">    visitor: [&quot;left&quot;, &quot;right&quot;],</span><br><span class="line">    aliases: [&quot;Binary&quot;, &quot;Expression&quot;],</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>babel 内部通过 defineType 方法定义 AST 类型的创建逻辑，其中 fileds 属性包含了这个 AST 需要什么属性，每种属性怎么校验。通过校验之后会根据相应的参数创建 AST。</p>
+<h3 id="template"><a href="#template" class="headerlink" title="template"></a>template</h3><p>babel template 是通过字符串批量创建 AST，我们可以基于 parser 实现一个简单的 template</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function template(code) &#123;</span><br><span class="line">    return parse(code);</span><br><span class="line">&#125;</span><br><span class="line">template.expression = function(code) &#123;</span><br><span class="line">    return template(code).body[0].expression;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上面的代码就可以变成：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">traverse(ast, &#123;</span><br><span class="line">    NumericLiteral(path) &#123;     </span><br><span class="line">        path.replaceWith(template.expression(&#x27;bbb&#x27;));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="generate"><a href="#generate" class="headerlink" title="generate"></a>generate</h3><p>上面都是对 AST 的增删改，接下来我们来实现下 generate，把 AST 打印成目标代码。</p>
+<p>其实就是一个拼接字符串的过程：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">class Printer &#123;</span><br><span class="line">    constructor () &#123;</span><br><span class="line">        this.buf = &#x27;&#x27;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    space() &#123;</span><br><span class="line">        this.buf += &#x27; &#x27;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    nextLine() &#123;</span><br><span class="line">        this.buf += &#x27;\n&#x27;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    Program (node) &#123;</span><br><span class="line">        node.body.forEach(item =&gt; &#123;</span><br><span class="line">            this[item.type](item) + &#x27;;&#x27;;</span><br><span class="line">            this.nextLine();</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    VariableDeclaration(node) &#123;</span><br><span class="line">        this.buf += node.kind;</span><br><span class="line">        this.space();</span><br><span class="line">        node.declarations.forEach((declaration, index) =&gt; &#123;</span><br><span class="line">            if (index != 0) &#123;</span><br><span class="line">                this.buf += &#x27;,&#x27;;</span><br><span class="line">            &#125;</span><br><span class="line">            this[declaration.type](declaration);</span><br><span class="line">        &#125;);</span><br><span class="line">        this.buf += &#x27;;&#x27;;</span><br><span class="line">    &#125;</span><br><span class="line">    VariableDeclarator(node) &#123;</span><br><span class="line">        this[node.id.type](node.id);</span><br><span class="line">        this.buf += &#x27;=&#x27;;</span><br><span class="line">        this[node.init.type](node.init);</span><br><span class="line">    &#125;</span><br><span class="line">    Identifier(node) &#123;</span><br><span class="line">        this.buf += node.name;</span><br><span class="line">    &#125;</span><br><span class="line">    NumericLiteral(node) &#123;</span><br><span class="line">        this.buf += node.value;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">class Generator extends Printer&#123;</span><br><span class="line"></span><br><span class="line">    generate(node) &#123;</span><br><span class="line">        this[node.type](node);</span><br><span class="line">        return this.buf;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">function generate (node) &#123;</span><br><span class="line">    return new Generator().generate(node);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>我们来试验一下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">const sourceCode = `</span><br><span class="line">const a = 1,b=2,c=3;</span><br><span class="line">const d=4,e=5;</span><br><span class="line">`;</span><br><span class="line"></span><br><span class="line">ast = parse(sourceCode);</span><br><span class="line">traverse(ast, &#123;</span><br><span class="line">    NumericLiteral(path) &#123;</span><br><span class="line">        if (path.node.value === 2) &#123;</span><br><span class="line">            path.replaceWith(template.expression(&#x27;aaaaa&#x27;));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; </span><br><span class="line">&#125;)</span><br><span class="line">console.log(generate(ast));</span><br></pre></td></tr></table></figure>
+
+<p>打印结果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const a=1,b=aaaaa,c=3;</span><br><span class="line">const d=4,e=5;</span><br></pre></td></tr></table></figure>
+
+<p>我们成功的实现了 generate 方法。</p>
+<h4 id="sourcemap"><a href="#sourcemap" class="headerlink" title="sourcemap"></a>sourcemap</h4><p>generator 除了打印目标代码外还要生成 sourcemap，这个是转译器很重要的一个功能。</p>
+<p>sourcemap 的实现思路也比较简单：</p>
+<p>parse 之后的 AST 中保留了源码中的位置信息（行列号），在打印成目标代码的时候计算新的行列号，这样有了新旧行列号，就可以用 source-map 包的 api 生成 sourcemap 了。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">var map = new SourceMapGenerator(&#123;</span><br><span class="line">  file: &quot;source-mapped.js&quot;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">map.addMapping(&#123;</span><br><span class="line">  generated: &#123;</span><br><span class="line">    line: 10,</span><br><span class="line">    column: 35</span><br><span class="line">  &#125;,</span><br><span class="line">  source: &quot;foo.js&quot;,</span><br><span class="line">  original: &#123;</span><br><span class="line">    line: 33,</span><br><span class="line">    column: 2</span><br><span class="line">  &#125;,</span><br><span class="line">  name: &quot;christopher&quot;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">console.log(map.toString());</span><br><span class="line">// &#x27;&#123;&quot;version&quot;:3,&quot;file&quot;:&quot;source-mapped.js&quot;,</span><br><span class="line">//   &quot;sources&quot;:[&quot;foo.js&quot;],&quot;names&quot;:[&quot;christopher&quot;],&quot;mappings&quot;:&quot;;;;;;;;;;mCAgCEA&quot;&#125;&#x27;</span><br></pre></td></tr></table></figure>
+
+<h3 id="core"><a href="#core" class="headerlink" title="core"></a>core</h3><p>上面我们已经实现了全流程的功能，但是平时我们平时很少使用 api，更多还是使用全流程的包 @babel/core，所以要基于上面的包实现 core 包，然后支持 plugin 和 preset。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">function transformSync(code, options) &#123;</span><br><span class="line">    const ast = parse(code);</span><br><span class="line"></span><br><span class="line">    const pluginApi = &#123;</span><br><span class="line">        template</span><br><span class="line">    &#125;</span><br><span class="line">    const visitors = &#123;&#125;;</span><br><span class="line">    options.plugins.forEach(([plugin, options]) =&gt; &#123;</span><br><span class="line">        const res = plugin(pluginApi, options);</span><br><span class="line">        Object.assign(visitors, res.visitor);</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    traverse(ast, visitors);</span><br><span class="line">    return generate(ast);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>plugin 支持传入 options，并且在 plugin 里面可以拿到 api 和 options，返回值是 visitor 函数：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">const sourceCode = `</span><br><span class="line">const a = 1;</span><br><span class="line">`;</span><br><span class="line"></span><br><span class="line">const code = transformSync(sourceCode, &#123;</span><br><span class="line">    plugins: [</span><br><span class="line">        [</span><br><span class="line">            function plugin1(api, options) &#123;</span><br><span class="line">                return &#123;</span><br><span class="line">                    visitor: &#123;</span><br><span class="line">                        Identifier(path) &#123;</span><br><span class="line">                                // path.node.value = 2222;</span><br><span class="line">                                path.replaceWith(api.template.expression(options.replaceName));</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                replaceName: &#x27;ddddd&#x27;</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    ]</span><br><span class="line">&#125;);</span><br><span class="line">console.log(code);</span><br></pre></td></tr></table></figure>
+
+<p>结果为:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const ddddd=1;</span><br></pre></td></tr></table></figure>
+
+<p>至此我们完成了 babel 所有内置功能的简易版本实现。(helper 就是一个放公共函数的包， runtime 是用于运行时引入的 api，这两个包比较简单，就不实现了。在《babel 插件通关秘籍》的小册里面会详细实现）</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>我们梳理了 babel 的编译流程和内置的包的各自的功能，然后明确了我们要实现的包：parser、traverse、generate、types、template、core。接下来依次做了实现或梳理了实现思路。</p>
+<p>parser 包基于 acorn，babel 是 fork 自 acorn，我们是直接基于 acorn 插件来修改 AST。我们实现了 Literal 的 AST 的扩展。</p>
+<p>traverse 包负责遍历 AST，我们通过记录 visitor key 实现了 AST 的深度优先遍历，并且在遍历的过程中调用 visitor，而且还支持 enter 和 exit 两个阶段的调用。visitor 传入的参数支持了 path，可以拿到 parent，可以调用 replaceWith 和 remove 等 api。我们还梳理了实现 scope 的思路。</p>
+<p>types 和 template 都是用于创建 AST 的，我们梳理了 types 的实现思路，就是递归创建 AST 然后组装，实现了简单的 template，使用直接从字符串 parse 的方式。</p>
+<p>generate 包负责把修改以后的 AST 打印成目标代码以及生成 sourcemap，我们实现了代码的打印。梳理了 sourcemap 的思路。</p>
+<p>core 包是整个编译流程的集成，而且支持 plugins 和 preset，我们实现了 transformSync 的 api，也支持了 plugin 的调用。</p>
+
+        </div>
+
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2021/05/18/js/js%E6%93%8D%E4%BD%9C%E7%AC%A6/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">js操作符</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2021/05/14/js/100%E4%B8%AAjs%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5%E6%80%BB%E7%BB%93/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">100个JavaScript代码片段总结</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2021</span>&nbsp;-&nbsp;
+            
+            2021&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">qiao</a>
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.3</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B4%E4%BD%93%E6%80%9D%E8%B7%AF"><span class="nav-number">1.</span> <span class="nav-text">整体思路</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#babel-%E7%9A%84%E7%BC%96%E8%AF%91%E6%B5%81%E7%A8%8B"><span class="nav-number">1.1.</span> <span class="nav-text">babel 的编译流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#babel7-%E5%86%85%E7%BD%AE%E7%9A%84%E5%8C%85"><span class="nav-number">1.2.</span> <span class="nav-text">babel7 内置的包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%88%91%E4%BB%AC%E8%A6%81%E5%AE%9E%E7%8E%B0%E5%93%AA%E4%BA%9B%E5%8C%85"><span class="nav-number">1.3.</span> <span class="nav-text">我们要实现哪些包</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.</span> <span class="nav-text">代码实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#parser"><span class="nav-number">2.1.</span> <span class="nav-text">parser</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#traverse"><span class="nav-number">2.2.</span> <span class="nav-text">traverse</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#visitor"><span class="nav-number">2.2.1.</span> <span class="nav-text">visitor</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#path"><span class="nav-number">2.2.2.</span> <span class="nav-text">path</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#path-%E7%9A%84-api"><span class="nav-number">2.2.3.</span> <span class="nav-text">path 的 api</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#path-scope"><span class="nav-number">2.2.3.1.</span> <span class="nav-text">path.scope</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#types"><span class="nav-number">2.3.</span> <span class="nav-text">types</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#template"><span class="nav-number">2.4.</span> <span class="nav-text">template</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#generate"><span class="nav-number">2.5.</span> <span class="nav-text">generate</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#sourcemap"><span class="nav-number">2.5.1.</span> <span class="nav-text">sourcemap</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#core"><span class="nav-number">2.6.</span> <span class="nav-text">core</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/code-copy.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/lazyload.js"></script>
+
+
+<div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/toc.js"></script>
+    
+</div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>
