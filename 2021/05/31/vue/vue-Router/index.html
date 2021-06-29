@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="qiao">
+    
+    <title>
+        
+            Vue-Router |
+        
+        Qiao
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/img.jpg">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/img.jpg","favicon":"/images/img.jpg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"3.4.3"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                Qiao
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                TAGS
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/links"
+                            >
+                                LINKS
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                ABOUT
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">TAGS</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/links">LINKS</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">ABOUT</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">Vue-Router</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/img.jpg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">qiao</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2021-05-31 10:38:06
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/vue/">vue</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/vue/">vue</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h3 id="完整的导航解析流程"><a href="#完整的导航解析流程" class="headerlink" title="完整的导航解析流程"></a>完整的导航解析流程</h3><ol>
+<li>导航被触发。</li>
+<li>在失活的组件里调用 <code>beforeRouteLeave</code> 守卫。</li>
+<li>调用全局的 <code>beforeEach</code> 守卫。</li>
+<li>在重用的组件里调用 <code>beforeRouteUpdate</code> 守卫 (2.2+)。</li>
+<li>在路由配置里调用 <code>beforeEnter</code>。</li>
+<li>解析异步路由组件。</li>
+<li>在被激活的组件里调用 <code>beforeRouteEnter</code>。</li>
+<li>调用全局的 <code>beforeResolve</code> 守卫 (2.5+)。</li>
+<li>导航被确认。</li>
+<li>调用全局的 <code>afterEach</code> 钩子。</li>
+<li>触发 DOM 更新。</li>
+<li>调用 <code>beforeRouteEnter</code> 守卫中传给 <code>next</code> 的回调函数，创建好的组件实例会作为回调函数的参数传入。</li>
+</ol>
+<h3 id="1-动态路由"><a href="#1-动态路由" class="headerlink" title="1. 动态路由"></a>1. 动态路由</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-命名视图"><a href="#2-命名视图" class="headerlink" title="2. 命名视图"></a>2. 命名视图</h3><h3 id="3-编程式导航"><a href="#3-编程式导航" class="headerlink" title="3. 编程式导航"></a>3. 编程式导航</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">this</span>.$router.push(<span class="string">&#x27;/&#x27;</span>)</span><br><span class="line"><span class="built_in">this</span>.$router.push(&#123;<span class="attr">name</span>:<span class="string">&#x27;Home&#x27;</span>&#125;)</span><br><span class="line"><span class="built_in">this</span>.$router.replace(<span class="string">&#x27;/&#x27;</span>)</span><br><span class="line"><span class="built_in">this</span>.$router.go(-<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-Hash-模式-与-History-模式的区别"><a href="#4-Hash-模式-与-History-模式的区别" class="headerlink" title="4. Hash 模式 与 History 模式的区别"></a>4. Hash 模式 与 History 模式的区别</h3><h4 id="4-1-表现形式的区别"><a href="#4-1-表现形式的区别" class="headerlink" title="4.1 表现形式的区别"></a>4.1 表现形式的区别</h4><p>​    1. hash 模式多了一个 #</p>
+<h4 id="4-2-原理的区别"><a href="#4-2-原理的区别" class="headerlink" title="4.2 原理的区别"></a>4.2 原理的区别</h4><ol>
+<li><p>Hash 模式是基于锚点，以及 onhashchange 事件</p>
+<ul>
+<li>URL 中 # 后面的内容作为路径地址</li>
+<li>监听 hashchange 事件</li>
+<li>根据当前路由地址找到对应组件重新渲染</li>
+</ul>
+</li>
+<li><p>History 模式是基于 HTML5 中的 History API</p>
+<ul>
+<li>通过 history.pushState() 方法改变地址栏</li>
+<li>监听 popState 事件</li>
+<li>根据当前路由地址找到对应组件重新渲染</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">history.pushState()   <span class="comment">// ie10以后才支持，所以兼容ie 9 需要使用 hash</span></span><br><span class="line">history.replaceState()</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="4-3-History-模式使用"><a href="#4-3-History-模式使用" class="headerlink" title="4.3 History 模式使用"></a>4.3 History 模式使用</h4><p>需要服务器支持</p>
+<p>单页应用中，服务端不存在 <a class="link"   target="_blank" rel="noopener" href="http://www.testurl.com/login" >http://www.testurl.com/login<i class="fas fa-external-link-alt"></i></a> 这样的地址，刷新发送请求会返回 404 找不到该页面</p>
+<p>在服务端应该除了静态资源外都返回单页应用的 index.html</p>
+<ul>
+<li><p>nodejs 配置</p>
+<p>原生 nodejs</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> httpPort = <span class="number">80</span></span><br><span class="line"></span><br><span class="line">http.createServer(<span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">  fs.readFile(<span class="string">&#x27;index.html&#x27;</span>, <span class="string">&#x27;utf-8&#x27;</span>, <span class="function">(<span class="params">err, content</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (err) &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&#x27;We cannot open &quot;index.html&quot; file.&#x27;</span>)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    res.writeHead(<span class="number">200</span>, &#123;</span><br><span class="line">      <span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;text/html; charset=utf-8&#x27;</span></span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    res.end(content)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;).listen(httpPort, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;Server listening on: http://localhost:%s&#x27;</span>, httpPort)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+
+<p>express : 使用 <a class="link"   target="_blank" rel="noopener" href="https://github.com/bripkens/connect-history-api-fallback" >connect-history-api-fallback 中间件<i class="fas fa-external-link-alt"></i></a></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> history = <span class="built_in">require</span>(<span class="string">&#x27;connect-history-api-fallback&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> app = express()</span><br><span class="line">app.use(history())</span><br><span class="line">app.use(express.static(path.join(__dirname,<span class="string">&#x27;../app/dist&#x27;</span>)))</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">3000</span>,<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;服务器开启，端口：3000&#x27;</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+<li><p>Nginx 配置</p>
+<ul>
+<li>从官网下载 Nginx 压缩包</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">启动 start nginx</span><br><span class="line">重启 nginx -s reload</span><br><span class="line">停止 nginx -s stop</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// nginx.conf</span></span><br><span class="line"></span><br><span class="line">location / &#123;</span><br><span class="line">  try_files $uri $uri/ /index.html;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="./img/nginx-history-vueRoter.JPG"
+                      alt="img"
+                ></p>
+</li>
+</ul>
+<h3 id="vue-router-实现原理"><a href="#vue-router-实现原理" class="headerlink" title="vue-router 实现原理"></a>vue-router 实现原理</h3><h3 id="vue-router-实现"><a href="#vue-router-实现" class="headerlink" title="vue-router 实现"></a>vue-router 实现</h3><ol>
+<li>install</li>
+<li>constructor</li>
+<li>createRouteMap</li>
+<li>initComponents</li>
+<li>init</li>
+<li>initEvent</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">let</span> _Vue = <span class="literal">null</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">VueRouter</span> </span>&#123;</span><br><span class="line">  <span class="keyword">static</span> <span class="function"><span class="title">install</span>(<span class="params">Vue</span>)</span>&#123;</span><br><span class="line">    <span class="comment">// 1. 判断当前插件是否已经被安装</span></span><br><span class="line">    <span class="keyword">if</span>(VueRouter.install.installed &amp;&amp; _Vue === Vue)&#123;</span><br><span class="line">      <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    VueRouter.install.installed = <span class="literal">true</span></span><br><span class="line">    <span class="comment">// 2. 把 Vue 构造函数记录到全局变量</span></span><br><span class="line">    _Vue = Vue</span><br><span class="line">    <span class="comment">// 3. 把创建 Vue 实例时候传入的 router 对象注入到 vue 实例上</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 混入</span></span><br><span class="line">    _Vue.mixin(&#123;</span><br><span class="line">      <span class="function"><span class="title">beforeCreate</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">this</span>.$options.router)&#123;</span><br><span class="line">          _Vue.prototype.$router = <span class="built_in">this</span>.$options.router</span><br><span class="line">          <span class="built_in">this</span>.$options.router.init()</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="title">constructor</span>(<span class="params">options</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.options = options</span><br><span class="line">    <span class="built_in">this</span>.routeMap = &#123;&#125;</span><br><span class="line">    <span class="built_in">this</span>.data = _Vue.observable(&#123;</span><br><span class="line">      <span class="attr">current</span>:<span class="string">&#x27;/&#x27;</span></span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="title">init</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.createRouteMap()</span><br><span class="line">    <span class="built_in">this</span>.initComponents(_Vue)</span><br><span class="line">    <span class="built_in">this</span>.initEvent()</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="title">createRouteMap</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">// 遍历所有的路由规则，把路由规则解析成键值对的形式，存储到 routeMap 中</span></span><br><span class="line">    <span class="built_in">this</span>.options.routes.forEach(<span class="function"><span class="params">route</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">this</span>.routeMap[route.path] = route.component</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">/*</span></span><br><span class="line"><span class="comment">  initComponents(Vue)&#123;</span></span><br><span class="line"><span class="comment">    Vue.component(&#x27;router-link&#x27;,&#123;</span></span><br><span class="line"><span class="comment">      props:&#123;</span></span><br><span class="line"><span class="comment">        to:String</span></span><br><span class="line"><span class="comment">      &#125;,</span></span><br><span class="line"><span class="comment">      template:&#x27;&lt;a :href=&quot;to&quot;&gt;&lt;slot&gt;&lt;/slot&gt;&lt;/a&gt;&#x27;</span></span><br><span class="line"><span class="comment">    &#125;)</span></span><br><span class="line"><span class="comment">  &#125;</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="title">initComponents</span>(<span class="params">Vue</span>)</span>&#123;</span><br><span class="line">    Vue.component(<span class="string">&#x27;router-link&#x27;</span>,&#123;</span><br><span class="line">      <span class="attr">props</span>:&#123;</span><br><span class="line">        <span class="attr">to</span>:<span class="built_in">String</span></span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="function"><span class="title">render</span>(<span class="params">h</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> h(<span class="string">&#x27;a&#x27;</span>,&#123;</span><br><span class="line">          <span class="attr">attrs</span>:&#123;</span><br><span class="line">            <span class="attr">href</span>:<span class="built_in">this</span>.to</span><br><span class="line">          &#125;,</span><br><span class="line">          <span class="attr">on</span>:&#123;</span><br><span class="line">            <span class="attr">click</span>:<span class="built_in">this</span>.clickHandler</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;,[</span><br><span class="line">          <span class="built_in">this</span>.$slots.default</span><br><span class="line">        ])</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="attr">methods</span>:&#123;</span><br><span class="line">        <span class="function"><span class="title">clickHandler</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">          history.pushState(&#123;&#125;,<span class="string">&#x27;&#x27;</span>,<span class="built_in">this</span>.to)</span><br><span class="line">          <span class="built_in">this</span>.$router.data.current = <span class="built_in">this</span>.to</span><br><span class="line">          e.preventDefault()</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">const</span> self = <span class="built_in">this</span></span><br><span class="line">    Vue.component(<span class="string">&#x27;router-view&#x27;</span>,&#123;</span><br><span class="line">      <span class="function"><span class="title">render</span>(<span class="params">h</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">const</span> component = self.routeMap[self.data.current]</span><br><span class="line">        <span class="keyword">return</span> h(component)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="title">initEvent</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">window</span>.addEventListener(<span class="string">&#x27;popstate&#x27;</span>,<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">this</span>.data.current = <span class="built_in">window</span>.location.pathname</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> VueRouter</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+        </div>
+
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2021/05/31/vue/nuxtjs/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Nuxt.js</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2021/05/31/vue/vue/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Vue</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+            <div class="comment-container">
+                <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments">&nbsp;Comments</i>
+    </div>
+    
+
+        
+            
+    <div id="gitalk-container"></div>
+    <script data-pjax
+            src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+    <script data-pjax>
+
+        function loadGitalk() {
+            let __gitalk__pathname = decodeURI(location.pathname);
+            const __gitalk__pathnameLength = __gitalk__pathname.length;
+            const __gitalk__pathnameMaxLength = 50;
+            if (__gitalk__pathnameLength > __gitalk__pathnameMaxLength) {
+                __gitalk__pathname = __gitalk__pathname.substring(0, __gitalk__pathnameMaxLength - 3) + '...';
+            }
+
+            try {
+                Gitalk && new Gitalk({
+                    clientID: 'd497aebd1393e4084852',
+                    clientSecret: 'fe2df06d7885541a3c098ad225dc39c6d64dc5f6',
+                    repo: 'blog-issues',
+                    owner: 'qiaolingyan',
+                    admin: ['qiaolingyan'],
+                    id: __gitalk__pathname,
+                    language: 'zh'
+                }).render('gitalk-container');
+
+            } catch (e) {
+                window.Gitalk = null;
+            }
+        }
+
+        if ('true') {
+            const loadGitalkTimeout = setTimeout(() => {
+                loadGitalk();
+                clearTimeout(loadGitalkTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadGitalk);
+        }
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2021</span>&nbsp;-&nbsp;
+            
+            2021&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">qiao</a>
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.3</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%8C%E6%95%B4%E7%9A%84%E5%AF%BC%E8%88%AA%E8%A7%A3%E6%9E%90%E6%B5%81%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text">完整的导航解析流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1"><span class="nav-number">2.</span> <span class="nav-text">1. 动态路由</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%91%BD%E5%90%8D%E8%A7%86%E5%9B%BE"><span class="nav-number">3.</span> <span class="nav-text">2. 命名视图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E7%BC%96%E7%A8%8B%E5%BC%8F%E5%AF%BC%E8%88%AA"><span class="nav-number">4.</span> <span class="nav-text">3. 编程式导航</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-Hash-%E6%A8%A1%E5%BC%8F-%E4%B8%8E-History-%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">5.</span> <span class="nav-text">4. Hash 模式 与 History 模式的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-%E8%A1%A8%E7%8E%B0%E5%BD%A2%E5%BC%8F%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">5.1.</span> <span class="nav-text">4.1 表现形式的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-%E5%8E%9F%E7%90%86%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">5.2.</span> <span class="nav-text">4.2 原理的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-History-%E6%A8%A1%E5%BC%8F%E4%BD%BF%E7%94%A8"><span class="nav-number">5.3.</span> <span class="nav-text">4.3 History 模式使用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vue-router-%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="nav-number">6.</span> <span class="nav-text">vue-router 实现原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vue-router-%E5%AE%9E%E7%8E%B0"><span class="nav-number">7.</span> <span class="nav-text">vue-router 实现</span></a></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/code-copy.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/lazyload.js"></script>
+
+
+<div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/toc.js"></script>
+    
+</div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>

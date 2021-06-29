@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="qiao">
+    
+    <title>
+        
+            vite |
+        
+        Qiao
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/img.jpg">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/img.jpg","favicon":"/images/img.jpg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"3.4.3"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                Qiao
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                TAGS
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/links"
+                            >
+                                LINKS
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                ABOUT
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">TAGS</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/links">LINKS</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">ABOUT</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">vite</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/img.jpg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">qiao</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2021-06-01 15:22:02
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E6%89%93%E5%8C%85/">打包</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/vue/">vue</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/vite/">vite</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <p>项目地址：<a class="link"   target="_blank" rel="noopener" href="https://gitee.com/endeavor1/q-vite-cli" >https://gitee.com/endeavor1/q-vite-cli<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="Vite-概念"><a href="#Vite-概念" class="headerlink" title="Vite 概念"></a>Vite 概念</h2><ul>
+<li>Vite 是一个面向现代浏览器的一个更轻、更快的 Web 应用开发工具</li>
+<li>它基于 ECMAScript 标准原生模块系统（ES Module）实现</li>
+<li>解决 webpack 在开发阶段 使用 dev-server 冷启动时间过长，另外 热更新 反应慢的问题</li>
+</ul>
+<h2 id="Vite-项目依赖"><a href="#Vite-项目依赖" class="headerlink" title="Vite 项目依赖"></a>Vite 项目依赖</h2><ul>
+<li>Vite</li>
+<li>@vue/compiler-sfc</li>
+</ul>
+<h2 id="Vite-创建项目"><a href="#Vite-创建项目" class="headerlink" title="Vite 创建项目"></a>Vite 创建项目</h2><ul>
+<li><p>使用 npm </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ npm init @vitejs/app &lt;project-name&gt;</span><br><span class="line">$ <span class="built_in">cd</span> &lt;project-name&gt;</span><br><span class="line">$ npm install</span><br><span class="line">$ npm run dev</span><br></pre></td></tr></table></figure></li>
+<li><p>使用 yarn</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ yarn create @vitejs/app &lt;project-name&gt;</span><br><span class="line">$ <span class="built_in">cd</span> &lt;project-name&gt;</span><br><span class="line">$ yarn</span><br><span class="line">$ yarn dev</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="基础使用"><a href="#基础使用" class="headerlink" title="基础使用"></a>基础使用</h2><h3 id="vite-serve"><a href="#vite-serve" class="headerlink" title="vite serve"></a><code>vite serve</code></h3><ul>
+<li>编译是在服务器端</li>
+<li>模块的处理是在请求到服务器端处理的</li>
+<li>采用即时编译，按需编译</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="C:\Users\qiaolingyan\AppData\Roaming\Typora\typora-user-images\image-20210601154824361.png"
+                      alt="img"
+                ></p>
+<ul>
+<li>vue-cli-service serve 对比<ul>
+<li>先打包，打包结果存储到内存中才会启动 web serve ，不管模块是否使用到，都会打包到 bundle里，项目体积大，打包速度就会变慢</li>
+</ul>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="./img/vue-cli.jpg"
+                      alt="img"
+                ></p>
+<ul>
+<li><h4 id="HMR"><a href="#HMR" class="headerlink" title="HMR"></a>HMR</h4><ul>
+<li><p>Vite HMR</p>
+<ul>
+<li>立即编译当前所修改的文件</li>
+</ul>
+</li>
+<li><p>Webpack HMR</p>
+<ul>
+<li>会自动以这个文件为入口重写 build 一次，所有涉及到的依赖也都会被加载一遍</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="vite-build"><a href="#vite-build" class="headerlink" title="vite build"></a><code>vite build</code></h3><ul>
+<li>Rollup</li>
+<li>Dynamic import (代码切割)<ul>
+<li>Polyfill</li>
+</ul>
+</li>
+</ul>
+<p><strong>打包 or 不打包</strong>：</p>
+<p>使用 Webpack 打包的两个原因：</p>
+<ul>
+<li><p>浏览器环境并不支持模块化</p>
+</li>
+<li><p>零散的模块文件会产生大量的 HTTP 请求</p>
+</li>
+</ul>
+<h2 id="Vite-特性"><a href="#Vite-特性" class="headerlink" title="Vite 特性"></a>Vite 特性</h2><ol>
+<li>快速冷启动</li>
+<li>模块热更新</li>
+<li>按需编译</li>
+<li>开箱即用</li>
+</ol>
+<h2 id="Vite-核心功能"><a href="#Vite-核心功能" class="headerlink" title="Vite 核心功能"></a>Vite 核心功能</h2><ol>
+<li>静态 Web 服务器</li>
+<li>编译单文件组件<ul>
+<li>拦截浏览器不识别的模块，并处理</li>
+</ul>
+</li>
+<li>HMR</li>
+</ol>
+<h2 id="Vite-实现原理"><a href="#Vite-实现原理" class="headerlink" title="Vite 实现原理"></a>Vite 实现原理</h2><ol>
+<li>vite 通过对请求路径劫持获取资源的内容返回给浏览器</li>
+<li>vite 热更新实现在 client 端，webSocket 监听了一些更新的类型</li>
+<li>vite 热更新实现在 server 端，通过 watcher 监听页面改动</li>
+</ol>
+<p><strong>使用 koa 开启一个 服务器</strong></p>
+<ol>
+<li><p>package.json 文件中添加 bin 字段，作为 cli 工具的入口</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;name&quot;</span>: <span class="string">&quot;q-vite-cli&quot;</span>,</span><br><span class="line"><span class="string">&quot;bin&quot;</span>: <span class="string">&quot;index.js&quot;</span>,</span><br></pre></td></tr></table></figure></li>
+<li><p>index.js 文件里开启 Koa 服务器</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env node</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Koa = <span class="built_in">require</span>(<span class="string">&#x27;koa&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> send = <span class="built_in">require</span>(<span class="string">&#x27;koa-send&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> Koa()</span><br><span class="line"><span class="comment">// 1. 开启静态文件服务器</span></span><br><span class="line">app.use(<span class="keyword">async</span> (ctx,next) =&gt; &#123;</span><br><span class="line">  <span class="keyword">await</span> send(ctx, ctx.path, &#123; <span class="attr">root</span>: process.cwd(), <span class="attr">index</span>: <span class="string">&#x27;index.html&#x27;</span>&#125;)</span><br><span class="line">  <span class="keyword">await</span> next()</span><br><span class="line">&#125;)</span><br><span class="line">app.listen(<span class="number">3000</span>)</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;Server running @ http://localhost:3000&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
+<li><p>npm link </p>
+</li>
+<li><p>vue 3 项目中 使用  <code>q-vite-cli</code> ,启动项目</p>
+<ul>
+<li>报错： <code>Uncaught TypeError: Failed to resolve module specifier &quot;vue&quot;. Relative references must start with either &quot;/&quot;, &quot;./&quot;, or &quot;../&quot;.</code></li>
+<li>原因：<code>main.js</code> 请求中  <code>import &#123; createApp &#125; from &#39;vue&#39;</code>时<strong>报错</strong></li>
+</ul>
+</li>
+</ol>
+<p><strong>修改第三方模块的路径</strong></p>
+<p>需要创建两个中间件：</p>
+<ul>
+<li><p>一个中间件用来修改 node_modules 模块的引入路径，修改为 <strong>/@modules/模块名称</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 把流转换为字符串</span></span><br><span class="line"><span class="keyword">const</span> streamToString = <span class="function"><span class="params">stream</span> =&gt;</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> chunks = []</span><br><span class="line">  stream.on(<span class="string">&#x27;data&#x27;</span>,<span class="function"><span class="params">chunk</span> =&gt;</span> chunks.push(chunk))</span><br><span class="line">  stream.on(<span class="string">&#x27;end&#x27;</span>,<span class="function">() =&gt;</span> resolve(Buffer.concat(chunks).toString(<span class="string">&#x27;utf-8&#x27;</span>)))</span><br><span class="line">  stream.on(<span class="string">&#x27;error&#x27;</span>,reject)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2. 修改第三方模块的路径</span></span><br><span class="line">app.use(<span class="keyword">async</span> (ctx,next) =&gt; &#123;</span><br><span class="line">  <span class="keyword">if</span>(ctx.type === <span class="string">&#x27;application/javascript&#x27;</span>)&#123;</span><br><span class="line">    <span class="comment">// ctx.body 是一个流</span></span><br><span class="line">    <span class="keyword">const</span> contents = <span class="keyword">await</span> streamToString(ctx.body)</span><br><span class="line">    <span class="comment">// import Vue from &#x27;vue&#x27;</span></span><br><span class="line">    <span class="comment">// import App from &#x27;./App.vue&#x27; || &#x27;/App.vue&#x27;</span></span><br><span class="line">    ctx.body = contents.replace(<span class="regexp">/(from\s+[&#x27;&quot;])(?![\.\/])/g</span>,<span class="string">&#x27;$1/@modules/&#x27;</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>更改配置后需关闭服务器，重新启动  <code>q-vite-cli</code> </p>
+</li>
+<li><p>另一个中间件是当请求处理回来后判断请求中是否有 <strong>/@modules/模块名称</strong></p>
+<ul>
+<li>需要放在 开启静态文件服务器 中间件之前</li>
+</ul>
+</li>
+</ul>
+<p>**加载第三方模块 **</p>
+<ul>
+<li><p>需要放在 开启静态文件服务器 中间件之前</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3. 加载第三方模块</span></span><br><span class="line">app.use(<span class="keyword">async</span> (ctx,next) =&gt; &#123;</span><br><span class="line">  <span class="comment">// ctx.path --&gt; /@modules/vue</span></span><br><span class="line">  <span class="keyword">if</span>(ctx.path.startsWith(<span class="string">&#x27;/@modules&#x27;</span>))&#123;</span><br><span class="line">    <span class="keyword">const</span> moduleName = ctx.path.substr(<span class="number">10</span>)</span><br><span class="line">    <span class="keyword">const</span> pkgPath = path.join(process.cwd(),<span class="string">&#x27;node_modules&#x27;</span>,moduleName,<span class="string">&#x27;package.json&#x27;</span>)</span><br><span class="line">    <span class="keyword">const</span> pkg = <span class="built_in">require</span>(pkgPath)</span><br><span class="line">    ctx.path = path.join(<span class="string">&#x27;/node_modules&#x27;</span>,moduleName,pkg.module)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">console</span>.log(ctx.path)</span><br><span class="line">  <span class="keyword">await</span> next()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><strong>编译单文件组件</strong></p>
+<ul>
+<li><p>开启静态文件服务器中间件 和 修改第三方模块的路径中间件 之间</p>
+</li>
+<li><p>需要使用 @vue/compiler-sfc <code>npm i @vue/compiler-sfc</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; Readable &#125; = <span class="built_in">require</span>(<span class="string">&#x27;stream&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> compilerSFC = <span class="built_in">require</span>(<span class="string">&#x27;@vue/compiler-sfc&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 把字符串转换为流</span></span><br><span class="line"><span class="keyword">const</span> stringTostream = <span class="function"><span class="params">text</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> stream = <span class="keyword">new</span> Readable()</span><br><span class="line">  stream.push(text)</span><br><span class="line">  stream.push(<span class="literal">null</span>)</span><br><span class="line">  <span class="keyword">return</span> stream</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 4. 处理单文件组件</span></span><br><span class="line">app.use(<span class="keyword">async</span> (ctx,next) =&gt; &#123;</span><br><span class="line">  <span class="keyword">if</span>(ctx.path.endsWith(<span class="string">&#x27;.vue&#x27;</span>))&#123;</span><br><span class="line">    <span class="keyword">const</span> contents = <span class="keyword">await</span> streamToString(ctx.body)</span><br><span class="line">    <span class="keyword">const</span> &#123; descriptor &#125; = compilerSFC.parse(contents)</span><br><span class="line">    <span class="keyword">let</span> code</span><br><span class="line">    <span class="keyword">if</span>(!ctx.query.type)&#123;</span><br><span class="line">      <span class="comment">// 单文件组件第一次请求</span></span><br><span class="line">      code = descriptor.script.content</span><br><span class="line">      code = code.replace(<span class="regexp">/export\s+default\s+/g</span>,<span class="string">&#x27;const __script = &#x27;</span>)</span><br><span class="line">      code += <span class="string">`</span></span><br><span class="line"><span class="string">        import &#123; render as __render &#125; from &quot;<span class="subst">$&#123;ctx.path&#125;</span>?type=template&quot;</span></span><br><span class="line"><span class="string">        __script.render = __render</span></span><br><span class="line"><span class="string">        export default __script</span></span><br><span class="line"><span class="string">      `</span></span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(ctx.query.type === <span class="string">&#x27;template&#x27;</span>)&#123;</span><br><span class="line">      <span class="comment">// 单文件组件第二次请求</span></span><br><span class="line">      <span class="keyword">const</span> templateRender = compilerSFC.compileTemplate(&#123; <span class="attr">source</span>: descriptor.template.content &#125;)</span><br><span class="line">      code = templateRender.code</span><br><span class="line">    &#125;</span><br><span class="line">    ctx.type = <span class="string">&#x27;application/javascript&#x27;</span></span><br><span class="line">    ctx.body = stringTostream(code)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">await</span> next()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+<li><p>报错：process is not defined，解决：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 2. 修改第三方模块的路径</span></span><br><span class="line">app.use(<span class="keyword">async</span> (ctx,next) =&gt; &#123;</span><br><span class="line">  <span class="keyword">if</span>(ctx.type === <span class="string">&#x27;application/javascript&#x27;</span>)&#123;</span><br><span class="line">    <span class="comment">// ctx.body 是一个流</span></span><br><span class="line">    <span class="keyword">const</span> contents = <span class="keyword">await</span> streamToString(ctx.body)</span><br><span class="line">    <span class="comment">// import Vue from &#x27;vue&#x27;</span></span><br><span class="line">    <span class="comment">// import App from &#x27;./App.vue&#x27;</span></span><br><span class="line">    ctx.body = contents</span><br><span class="line">      .replace(<span class="regexp">/(from\s+[&#x27;&quot;])(?![\.\/])/g</span>,<span class="string">&#x27;$1/@modules/&#x27;</span>)</span><br><span class="line">      .replace(<span class="regexp">/process\.env\.NODE_ENV/g</span>,<span class="string">&#x27;&quot;development&quot;&#x27;</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+        </div>
+
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2021/06/01/nodejs/nodejs%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Vue-Router</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2021/06/01/vue/vue3%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">vue3响应式原理</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+            <div class="comment-container">
+                <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments">&nbsp;Comments</i>
+    </div>
+    
+
+        
+            
+    <div id="gitalk-container"></div>
+    <script data-pjax
+            src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+    <script data-pjax>
+
+        function loadGitalk() {
+            let __gitalk__pathname = decodeURI(location.pathname);
+            const __gitalk__pathnameLength = __gitalk__pathname.length;
+            const __gitalk__pathnameMaxLength = 50;
+            if (__gitalk__pathnameLength > __gitalk__pathnameMaxLength) {
+                __gitalk__pathname = __gitalk__pathname.substring(0, __gitalk__pathnameMaxLength - 3) + '...';
+            }
+
+            try {
+                Gitalk && new Gitalk({
+                    clientID: 'd497aebd1393e4084852',
+                    clientSecret: 'fe2df06d7885541a3c098ad225dc39c6d64dc5f6',
+                    repo: 'blog-issues',
+                    owner: 'qiaolingyan',
+                    admin: ['qiaolingyan'],
+                    id: __gitalk__pathname,
+                    language: 'zh'
+                }).render('gitalk-container');
+
+            } catch (e) {
+                window.Gitalk = null;
+            }
+        }
+
+        if ('true') {
+            const loadGitalkTimeout = setTimeout(() => {
+                loadGitalk();
+                clearTimeout(loadGitalkTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadGitalk);
+        }
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2021</span>&nbsp;-&nbsp;
+            
+            2021&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">qiao</a>
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.3</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Vite-%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">Vite 概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vite-%E9%A1%B9%E7%9B%AE%E4%BE%9D%E8%B5%96"><span class="nav-number">2.</span> <span class="nav-text">Vite 项目依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vite-%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE"><span class="nav-number">3.</span> <span class="nav-text">Vite 创建项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8"><span class="nav-number">4.</span> <span class="nav-text">基础使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#vite-serve"><span class="nav-number">4.1.</span> <span class="nav-text">vite serve</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#HMR"><span class="nav-number">4.1.1.</span> <span class="nav-text">HMR</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vite-build"><span class="nav-number">4.2.</span> <span class="nav-text">vite build</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vite-%E7%89%B9%E6%80%A7"><span class="nav-number">5.</span> <span class="nav-text">Vite 特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vite-%E6%A0%B8%E5%BF%83%E5%8A%9F%E8%83%BD"><span class="nav-number">6.</span> <span class="nav-text">Vite 核心功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vite-%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="nav-number">7.</span> <span class="nav-text">Vite 实现原理</span></a></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/code-copy.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/lazyload.js"></script>
+
+
+<div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/toc.js"></script>
+    
+</div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>
